@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="baselink_mount">
+  <link name="mount">
+    <inertial>
+      <origin
+        xyz="0 3.36507382683391E-18 0.075"
+        rpy="0 0 0" />
+      <mass
+        value="13.232" />
+      <inertia
+        ixx="0.03672"
+        ixy="7.04577265671705E-51"
+        ixz="-1.1507E-34"
+        iyy="0.03672"
+        iyz="-7.89993558850816E-19"
+        izz="0.023818" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_ur10_description/meshes/baselink.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.52941 0.54902 0.54902 1" />
+        <texture
+          filename="package://my_ur10_description/meshes/baselink.STL" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_ur10_description/meshes/baselink.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

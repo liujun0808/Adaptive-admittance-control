@@ -1,0 +1,14 @@
+material carbon_steel
+{
+    technique
+    {
+        pass
+        {
+            ambient 0.2 0.2 0.2 1
+            diffuse 0.8 0.8 0.8 1
+            specular 0.3 0.3 0.3 1
+            emissive 0 0 0 1
+            shininess 50
+        }
+    }
+}

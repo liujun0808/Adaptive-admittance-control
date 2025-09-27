@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="vertical_01">
+  <link
+    name="verticla_01">
+    <inertial>
+      <origin
+        xyz="0.25 0.01 8.6007E-20"
+        rpy="0 0 0" />
+      <mass
+        value="0.40888" />
+      <inertia
+        ixx="2.0335E-05"
+        ixy="4.7229E-14"
+        ixz="1.8208E-13"
+        iyy="0.00098718"
+        iyz="3.2208E-13"
+        izz="0.00098718" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <!-- xyz="0.1 0 0"
+      rpy="1.5707963267949 0 0" /> -->
+    <geometry>
+        <mesh
+          filename="package://my_ur10_description/meshes/object/vertical_01.STL" />
+      </geometry>
+      <material
+        name="plain_carbon_steel">
+        <color
+          rgba="0.52941 0.54902 0.54902 1" />
+        <!-- <texture filename="package://verticla/textures/" 0.40888/> -->
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_ur10_description/meshes/object/vertical_01.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="vertical_01">
+    <material>
+      <color rgba="0.52941 0.54902 0.54902 1" />
+    </material>
+    <kp>1000000.0</kp>
+    <kd>1.0</kd>
+    <mu1>0.8</mu1>
+    <mu2>0.7</mu2>
+    <maxVel>0</maxVel>
+    <minDepth>0.001</minDepth>
+    <!-- <selfCollide>true</selfCollide> -->
+  </gazebo>
+</robot>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="center_01">
+  <link
+    name="center_01">
+    <inertial>
+      <origin
+        xyz="0.05 0.05 -0.015665"
+        rpy="0 0 0" />
+      <mass
+        value="0.97831" />
+      <inertia
+        ixx="0.00073743"
+        ixy="5.9851E-13"
+        ixz="-1.6345E-14"
+        iyy="0.00073743"
+        iyz="-2.1095E-15"
+        izz="0.0012655" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+    <geometry>
+        <mesh
+          filename="package://my_ur10_description/meshes/object/center_01.STL" />
+      </geometry>
+      <material
+        name="plain_carbon_steel">
+        <color
+          rgba="0.52941 0.54902 0.54902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_ur10_description/meshes/object/center_01.STL" />
+      </geometry>
+          <!-- <surface>
+        <friction>
+          <ode>
+            <mu>1.16</mu>
+            <mu2>1.16</mu2>
+          </ode>
+          <torsional>
+          <ode/>
+          </torsional>
+        </friction>
+        <contact>
+            <ode/>
+        </contact>
+        <bounce/>
+      </surface>
+    <max_contacts>10</max_contacts> -->
+    </collision>
+  </link>
+
+  <gazebo reference="center_01">
+    <static>1</static>
+        <material>
+      <color rgba="0.52941 0.54902 0.54902 1" />
+    </material>
+    <kp>1000000.0</kp>
+    <kd>1.0</kd>
+    <mu1>1.16</mu1>
+    <mu2>1.16</mu2>
+    <maxVel>0</maxVel>
+    <minDepth>0.001</minDepth>
+    <!-- <selfCollide>true</selfCollide> -->
+  </gazebo>
+</robot>

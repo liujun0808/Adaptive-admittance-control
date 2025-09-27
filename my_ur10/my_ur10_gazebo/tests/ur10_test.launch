@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="paused" default="false"/>
+  <arg name="gui" default="true"/>
+  <arg name="debug" default="false"/>
+    <arg name="gazebo_world" default="worlds/empty.world" doc="The '.world' file to load in Gazebo." />
+
+  
+  <!-- startup simulated world -->
+
+    <include file="$(find my_ur10_gazebo)/launch/empty_world.launch" >
+    <arg name="world_name" value="$(arg gazebo_world)"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="gui" value="$(arg gui)"/>
+  </include>
+</launch>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="horizontal_01">
+  <link
+    name="horizontal_01">
+    <!-- <inertial>
+      <origin
+        xyz="0.25 5.26296176911189E-19 0.01"
+        rpy="0 0 0" />
+      <mass
+        value="1.2003" />
+      <inertia
+        ixx="5.9279E-05"
+        ixy="1.37639999999995E-20"
+        ixz="8.2947E-18"
+        iyy="0.024146"
+        iyz="-8.60270000000047E-22"
+        izz="0.024146" />
+    </inertial> -->
+    <inertial>
+      <origin
+        xyz="0.25 0.01 8.6007E-20"
+        rpy="0 0 0" />
+      <mass
+        value="1.2003" />
+      <inertia
+        ixx="5.9279E-05"
+        ixy="-8.2947E-18"
+        ixz="1.3764E-20"
+        iyy="0.024146"
+        iyz="8.6027E-22"
+        izz="0.024146" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <!-- xyz="0.25 0 0"
+      rpy="0 0 0" /> -->
+    <geometry>
+        <mesh
+          filename="package://my_ur10_description/meshes/object/horizontal_01.STL" />
+      </geometry>
+      <material
+        name="plain_carbon_steel">
+        <color
+          rgba="0.52941 0.54902 0.54902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://my_ur10_description/meshes/object/horizontal_01.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <gazebo reference="horizontal_01">
+      <material>
+      <color rgba="0.52941 0.54902 0.54902 1" />
+      </material>
+    <kp>1000000.0</kp>
+    <kd>1.0</kd>
+    <mu1>100</mu1>
+    <mu2>100</mu2>
+    <maxVel>0.0</maxVel>
+    <minDepth>0.001</minDepth>
+    <!-- <selfCollide>true</selfCollide> -->
+    </gazebo>
+</robot>

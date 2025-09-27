@@ -1,0 +1,28 @@
+<launch>
+  <arg name="sim" default="false" />
+  <arg name="debug" default="false" />
+
+  <!-- Remap follow_joint_trajectory -->
+  <remap if="$(arg sim)" from="/scaled_pos_joint_traj_controller/follow_joint_trajectory" to="/eff_joint_traj_controller/follow_joint_trajectory"/>
+
+  <!-- Launch moveit -->
+  <include file="$(find my_ur10_moveit_config)/launch/move_group.launch">
+    <arg name="debug" default="$(arg debug)" />
+  </include>
+
+  <include file="$(find moveit_servo)/launch/spacenav_cpp.launch" />
+  
+  <!-- camera to tool0_controller -->
+    <node pkg="tf" type="static_transform_publisher" name="camera_broadcaster"
+    args= "-0.03251035447903138 -0.09593366762422272 -0.1324282344005938 
+    0.002278560515414106 -0.006934264446157634 -0.002919271464858746 0.9999691005189528
+    tool0_controller camera_color_frame 100"
+
+  />
+  <!-- <node pkg="tf" type="static_transform_publisher" name="camera_broadcaster"
+    args= "-0.01919511969470077 -0.12170133985788578 -0.13605242406417764 
+    -0.0014978432794126686 -0.00928492583714502 0.0029541464508150753 0.9999514086376678
+    tool0_controller camera_color_frame 100"
+
+  /> -->
+</launch>

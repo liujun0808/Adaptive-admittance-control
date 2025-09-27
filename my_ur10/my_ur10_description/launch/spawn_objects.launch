@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<launch>
+
+  <param name="center_01_description" textfile="$(find my_ur10_description)/urdf/object/center_01.urdf" />
+  <param name="center_02_description" textfile="$(find my_ur10_description)/urdf/object/center_02.urdf" />
+  <param name="soda_can_description" textfile="$(find my_ur10_description)/urdf/object/soda_can.urdf" />
+  <param name="box_description" textfile="$(find my_ur10_description)/urdf/object/box.urdf" />
+
+
+  <param name="horizontal_01_description"
+    textfile="$(find my_ur10_description)/urdf/object/horizontal_01.urdf" />
+  <param name="vertical_01_description"
+    textfile="$(find my_ur10_description)/urdf/object/vertical_01.urdf" />
+
+  <!-- 节点件 -->
+  <node name="spawn_center_01" pkg="gazebo_ros" type="spawn_model"
+    args="-urdf -param center_01_description -model center_01 -x .645 -y .725 -z 1.073"   
+    respawn="false" output="screen" />
+  <!-- <node name="spawn_center_02" pkg="gazebo_ros" type="spawn_model"
+    args="-urdf -param center_02_description -model center_02 -x .32 -y -.4 -z 0.88"
+    respawn="false" output="screen" /> -->
+
+  <!-- 水平筋 -->
+  <!-- <node name="spawn_horizontal_01" pkg="gazebo_ros" type="spawn_model"
+    args="-urdf -param horizontal_01_description -model horizontal_01 -x .2 -y -.45 -z 0.843"
+    respawn="false" output="screen" /> -->
+
+    
+    <!-- 竖直筋 -->
+    <!-- <node name="spawn_vertical_01" pkg="gazebo_ros" type="spawn_model"
+      args="-urdf -param vertical_01_description -model vertical_01 -x .2 -y -.55 -z 0.843"
+      respawn="false" output="screen" /> -->
+
+  <!-- test -->
+  <!-- <node name="spawn_soda_can" pkg="gazebo_ros" type="spawn_model"
+      args="-urdf -param soda_can_description -model soda_can -x .45 -y -.45 -z 0.82"
+      respawn="false" output="screen" /> -->
+  <!-- <node name="spawn_box" pkg="gazebo_ros" type="spawn_model"
+      args="-urdf -param box_description -model box -x .689 -y 0.73 -z 1.03"
+      respawn="false" output="screen" /> -->
+<!-- .164 -->
+</launch>

@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: my_ur10_description
+    relative_path: urdf/ur10.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/ur10_robot.srdf
+  CONFIG:
+    author_name: liujun
+    author_email: liujun8014@163.com
+    generated_timestamp: 1705749195
